@@ -6,7 +6,8 @@
 
 - 必須の８カラム(#CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO)。
 - VCFフォーマットのvalidator toolにかけてOKであること（vcf-validatorなど？）。
-- メタデータの統一か（多分reference genomeを記載することなどは必須かと思う）。
+- メタデータの統一化（多分reference genomeを記載することなどは必須かと思う）。
+- indelのnormalization (bcftools normなど）
 
 ## 検討するべき事柄
 
@@ -22,11 +23,17 @@
 
 #### INFO
 
-変異自体のアノテーション情報。VEPなどのアノテーションを付与する形か。
+- 変異自体のアノテーション情報。VEPなどのアノテーションを付与する形か。
+- [ここ](https://samtools.github.io/hts-specs/VCFv4.3.pdf)の9ページ目のTable1にreserved fieldの記載がある。
 
 #### FORMAT
 
-TUMOR, NORMALのそれぞれのシークエンスデータに由来する情報（変異リード数、変異比率など）。
+- TUMOR, NORMALのそれぞれのシークエンスデータに由来する情報（変異リード数、変異比率など）。
+- [ここ](https://samtools.github.io/hts-specs/VCFv4.3.pdf)の10ページ目のTable2にreserved fieldの記載がある。ただし、INFOのreservedと重複するfieldがいくつかある。これはおそらく一検体の変異データをVCFで表現するときは、FORMATとINFOが統合されることがあるためであろうと思う。
+
+#### DNV, complex indelについての処理
+
+こちらは可能であれば対応したい（DNVくらいはできるかな？）
 
 #### SVのフォーマット
 
