@@ -30,6 +30,7 @@
 - t_lod_fstar
 - clustered_events
 - alt_allele_in_normal
+- homologous_mapping_event
 
 #### INFO
 
