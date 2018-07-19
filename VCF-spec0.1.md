@@ -23,6 +23,9 @@
 
 #### FILTER
 
+- 第一段階の変異コール、そのあとのfiltering stepが別れている場合がある気がする（mutect2とか確認したい）。
+- bcftools filterの挙動（ある条件でPASSという文字列を付与するっぽい）も理解したい。
+
 種々のフィルタリングの結果を記載する。参考として、
 - panel_of_normals
 - str_contraction
@@ -31,6 +34,21 @@
 - clustered_events
 - alt_allele_in_normal
 - homologous_mapping_event
+
+##### [Genomon Mutation Filter](https://github.com/Genomon-Project/GenomonMutationFilter)との整合性
+
+大まかなアプローチの方向性として
+1. FILTER項目に、直接PASSなり各々のfilter基準を記載する形式。
+2. INFO, FORMATにまず付随情報を付与して、その後必要があれば、bcftools filterなどで処理を行う。
+の２つがある（多分後者が良い気がする）。
+
+- realignment: これはINFO, FORMATにrealignmentによるアレル比率、変異リード数、P-valueなどを付与することで対応。その後bcftools filterか？
+- indel: 
+- breakpoint: 
+- simplerepeat: 
+- EBFilter: 
+- panel_of_normals: FILTER項目で対応して良い気がする。
+
 
 #### INFO
 
