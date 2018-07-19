@@ -13,6 +13,10 @@
 
 ### validatorの選定
 
+- vcflibの[vcfcheck](https://github.com/vcflib/vcflib#vcfcheck)
+- [vcf-validator](https://github.com/EBIvariation/vcf-validator)
+- [GATK](https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_hellbender_tools_walkers_variantutils_ValidateVariants.php)
+
 ### FILTER, INFO, FORMATに何を記載するか？
 
 まずは、TUMOR, NORMALをペアとして記載する形式をとる方向で行く（Genomic Data Commonsにそう形）。
@@ -53,3 +57,7 @@ SNV, short indelの検討の後に、詳細を検討（重要であるが、優�
 - [vcflib](https://github.com/vcflib/vcflib)
 - [vcftools](https://github.com/vcftools/vcftools)
 - [vcf-validator](https://github.com/EBIvariation/vcf-validator)
+
+以下はちょっとマイナーっぽい。
+- [VcfPythonUtils](https://github.com/indapa/VcfPythonUtils)
+- [vcfCTools](https://github.com/AlistairNWard/vcfCTools)
