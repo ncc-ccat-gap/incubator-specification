@@ -10,8 +10,18 @@
 
 ## 検討するべき事柄
 
+- validatorの選定。
+- INFO, FORMATに何を記載するか？
+- annotationをどうするか？VEPを使う？
 - SVのフォーマットについてどうするか検討する。
-- INFO, FORMATの違いは結局何だろう?
+
+
+## 気が付いた事柄のメモ
+
+- INFO, FORMATの違いは結局何だろう?（おそらく、INFOは変異自体のアノテーション情報、FORMATはTUMORとNORMALのそれぞれのシークエンスデータに由来する情報）。
+
+## 重要リンク
+- https://docs.gdc.cancer.gov/Data/File_Formats/VCF_Format/
 
 ## 参考になりそうなツール
 
