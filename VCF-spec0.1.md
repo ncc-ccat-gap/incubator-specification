@@ -24,6 +24,12 @@
 #### FILTER
 
 種々のフィルタリングの結果を記載する。参考として、
+- panel_of_normals
+- str_contraction
+- germline_risk
+- t_lod_fstar
+- clustered_events
+- alt_allele_in_normal
 
 #### INFO
 
