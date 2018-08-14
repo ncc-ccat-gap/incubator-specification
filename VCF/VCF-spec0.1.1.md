@@ -16,3 +16,9 @@
 - 基本的なフォーマットチェックはされるが、1つエラーを検出するとThrow Exceptionでエラー終了するので使い勝手が悪い。コマンド名から推察できるがフォーマットチェックがメインではない印象を受けた。
 - INFOフィールドのAC,ANやFORMATフィールドGTなどGATK独自の厳重なチェックが行われる。VCF Version 4.2 Speciﬁcationからはこの厳重なチェックをしている理由がわからなかった。
 - mutect2で出力したVCFファイルはエラーにならない。 
+
+## ツール
+上記の3つのValidatorを簡単に使用するためにラッパーツールを作成した。
+そのツールはDockerファイルを使用して3つのValidatorをインストールし、入力したVCFのValidationを行う。
+github: ken0-1n/[three-arrowed-vcf-validator](https://github.com/ken0-1n/three-arrowed-vcf-validator)
+
