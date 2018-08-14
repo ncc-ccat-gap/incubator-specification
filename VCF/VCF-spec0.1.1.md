@@ -13,8 +13,8 @@
 
 ### [GATK](https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_hellbender_tools_walkers_variantutils_ValidateVariants.php)
 
-- 基本的なフォーマットチェックはされるが、1つエラーを検出するとThrow Exceptionでエラー終了するので使い勝手が悪い。コマンド名から推察できるがフォーマットチェックがメインではない印象を受けた。
-- INFOフィールドのAC,ANやFORMATフィールドGTなどGATK独自の厳重なチェックが行われる。VCF Version 4.2 Speciﬁcationからはこの厳重なチェックをしている理由がわからなかった。
+- INFOフィールドのAC,ANの正確さやFORMATフィールドGTの整合性などをチェックする。これらはVCF Version 4.2 Speciﬁcationに記載のないGATK独自チェックである。
+- フォーマットチェックもされるがVcf-Validatorほど厳しくない。1つエラーを検出するとThrow Exceptionし終了するためフォーマットチェックとしては使い勝手も悪い。おそらくはこの簡素なフォーマットチェックは、上記のGATK独自チェック行うために実施している印象を受けた。
 - mutect2で出力したVCFファイルはエラーにならない。 
 
 ## ツール
